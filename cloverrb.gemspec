@@ -6,12 +6,13 @@ require "cloverrb/version"
 Gem::Specification.new do |spec|
   spec.name          = "cloverrb"
   spec.version       = Cloverrb::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
+  spec.authors       = ["Arman Jon Villalobos"]
+  spec.email         = ["me@armanjon.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Ruby wrapper for Clover API}
+  spec.description   = %q{Ruby wrapper for Clover API}
+  spec.homepage      = ""
+  spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
@@ -32,4 +33,10 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
+  spec.add_development_dependency "vcr"
+  spec.add_development_dependency "webmock"
+  spec.add_development_dependency "pry"
+
+  spec.add_dependency "httparty"
+  spec.add_dependency "dotenv"
 end
