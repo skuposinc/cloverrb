@@ -1,0 +1,41 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clover.com/v3/merchants/CQWH7CZZVQ072
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 49ec922b-9d00-aef1-270c-b94ec130f795
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '1310'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+    body:
+      encoding: UTF-8
+      string: '{"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072", "id":
+        "CQWH7CZZVQ072", "name": "Josh''s Cafe", "owner": {"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072/employees/QGBQ9V5JSB05R",
+        "id": "QGBQ9V5JSB05R", "orders": {"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072/employees/QGBQ9V5JSB05R/orders"}},
+        "address": {"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072/address"},
+        "merchantPlan": {"id": "FKNKX0SAATWAG"}, "createdTime": 1485544650000, "gateway":
+        {}, "tenders": {"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072/tenders"},
+        "shifts": {"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072/shifts"},
+        "orders": {"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072/orders"},
+        "payments": {"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072/payments"},
+        "taxRates": {"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072/tax_rates"},
+        "printers": {"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072/printers"},
+        "modifierGroups": {"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072/modifier_groups"},
+        "orderTypes": {"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072/order_types"},
+        "reseller": {"id": "EKJGCMKBTDK4A"}, "opening_hours": {"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072/opening_hours"}}'
+    http_version: 
+  recorded_at: Thu, 06 Jul 2017 11:50:16 GMT
+recorded_with: VCR 3.0.3
