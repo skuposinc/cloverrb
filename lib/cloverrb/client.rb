@@ -1,12 +1,9 @@
 module Cloverrb
   class Client
-    BASE_URL = "https://api.clover.com/v3/"
+    BASE_URL = "https://api.clover.com/v3"
 
     def get(token, path)
-      HTTParty.get(
-        BASE_URL + path,
-        headers: build_headers(token)
-      ).parsed_response
+      HTTParty.get(BASE_URL + path, headers: build_headers(token)).parsed_response
     end
 
     def post(token, path, body)
