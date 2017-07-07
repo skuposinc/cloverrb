@@ -2,8 +2,8 @@ require "spec_helper"
 
 RSpec.describe Cloverrb::Employee do
   describe "GET all employees" do
-    token = "49ec922b-9d00-aef1-270c-b94ec130f795"
-    merchant_id = "CQWH7CZZVQ072"
+    token = ENV['TEST_API_TOKEN']
+    merchant_id = ENV['TEST_MERCHANT_ID']
 
     it "should get all the employees" do
       VCR.use_cassette("get_all_employees", record: :once) do
