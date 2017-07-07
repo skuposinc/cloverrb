@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://clover.com/oauth/token?client_id=738TXSSPWFQ8J&client_secret=40f64a86-b4dc-a41f-7efa-7e1ab9ccf165&code=35be95bf-8c10-3783-9122-8a0b42a93493
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Length:
+      - '0'
+      Location:
+      - https://www.clover.com/oauth/token?client_id=738TXSSPWFQ8J&client_secret=40f64a86-b4dc-a41f-7efa-7e1ab9ccf165&code=35be95bf-8c10-3783-9122-8a0b42a93493
+      Connection:
+      - close
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Fri, 07 Jul 2017 05:02:04 GMT
+- request:
+    method: get
+    uri: https://www.clover.com/oauth/token?client_id=738TXSSPWFQ8J&client_secret=40f64a86-b4dc-a41f-7efa-7e1ab9ccf165&code=35be95bf-8c10-3783-9122-8a0b42a93493
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      X-Frame-Options:
+      - SAMEORIGIN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"access_token":"1275d0e2-3430-5dc5-22fc-62e92bd53d73"}'
+    http_version: 
+  recorded_at: Fri, 07 Jul 2017 05:02:05 GMT
+recorded_with: VCR 3.0.3
