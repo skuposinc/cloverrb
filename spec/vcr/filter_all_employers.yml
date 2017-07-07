@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clover.com/v3/merchants/CQWH7CZZVQ072/employees?filter=role=EMPLOYEE
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 49ec922b-9d00-aef1-270c-b94ec130f795
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Clover-Allowed-Filter-Fields:
+      - modifiedTime, role, role.id, customId, pin, name, nickname, id, deletedTime,
+        deleted_time, email
+      Content-Length:
+      - '1525'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+    body:
+      encoding: UTF-8
+      string: '{"elements": [ {"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072/employees/1D5AGFDBF88G2",
+        "id": "1D5AGFDBF88G2", "name": "Renee", "nickname": "Renee M.", "email": "renee@tanda.co",
+        "inviteSent": false, "claimedTime": 1498613338000, "pin": "9571", "role":
+        "EMPLOYEE", "orders": {"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072/employees/1D5AGFDBF88G2/orders"}},
+        {"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072/employees/9WHRAZGKVBQG4",
+        "id": "9WHRAZGKVBQG4", "name": "Kaitlyn Fahey", "nickname": "Kaitlyn F.",
+        "email": "kaitlyn@tanda.co", "inviteSent": false, "pin": "9573", "role": "EMPLOYEE",
+        "orders": {"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072/employees/9WHRAZGKVBQG4/orders"}},
+        {"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072/employees/NJ743JTNNT5GJ",
+        "id": "NJ743JTNNT5GJ", "name": "Sophia Hooton", "nickname": "Sophia H.", "email":
+        "sophia@tanda.co", "inviteSent": false, "pin": "5135", "role": "EMPLOYEE",
+        "orders": {"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072/employees/NJ743JTNNT5GJ/orders"}},
+        {"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072/employees/EHCN8W48TBTS4",
+        "id": "EHCN8W48TBTS4", "name": "Adam Lyons", "nickname": "Adam L.", "email":
+        "adam@tanda.co", "inviteSent": false, "pin": "7631", "role": "EMPLOYEE", "orders":
+        {"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072/employees/EHCN8W48TBTS4/orders"}}],
+        "href": "http://api.clover.com/v3/merchants/CQWH7CZZVQ072/employees?filter=role%3DEMPLOYEE&limit=100"}'
+    http_version: 
+  recorded_at: Fri, 07 Jul 2017 03:07:04 GMT
+recorded_with: VCR 3.0.3
