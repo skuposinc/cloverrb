@@ -1,0 +1,107 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://apisandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders?filter=createdTime%3C=1497488400000
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer ba54b5a8-cccc-3de3-cf5f-13b93b6a215a
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Clover-Allowed-Filter-Fields:
+      - employee.id, note, modifiedTime, orderType, cardTransaction.last4, manualTransaction,
+        employee.name, title, device.id, clientCreatedTime, total, payType, customer.id,
+        testMode, createdTime, id, state, deletedTime
+      Content-Length:
+      - '6102'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+    body:
+      encoding: UTF-8
+      string: '{"elements": [ {"href": "https://sandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/B2Y78S8KA0Z56",
+        "id": "B2Y78S8KA0Z56", "currency": "USD", "employee": {"id": "5W3Q4B3T88VAR"},
+        "taxRemoved": false, "isVat": false, "state": "open", "manualTransaction":
+        false, "groupLineItems": true, "testMode": false, "createdTime": 1497485039000,
+        "clientCreatedTime": 1497485039000, "modifiedTime": 1497485039000}, {"href":
+        "https://sandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/TV0GG2NG45KEM",
+        "id": "TV0GG2NG45KEM", "currency": "USD", "employee": {"id": "5W3Q4B3T88VAR"},
+        "taxRemoved": false, "isVat": false, "state": "open", "manualTransaction":
+        false, "groupLineItems": true, "testMode": false, "createdTime": 1497485039000,
+        "clientCreatedTime": 1497485039000, "modifiedTime": 1497485038000}, {"href":
+        "https://sandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/0HS539QZJAC0M",
+        "id": "0HS539QZJAC0M", "currency": "USD", "employee": {"id": "5W3Q4B3T88VAR"},
+        "taxRemoved": false, "isVat": false, "state": "open", "manualTransaction":
+        false, "groupLineItems": true, "testMode": false, "createdTime": 1497485038000,
+        "clientCreatedTime": 1497485038000, "modifiedTime": 1497485038000}, {"href":
+        "https://sandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/M1A83K7SC2CJJ",
+        "id": "M1A83K7SC2CJJ", "currency": "USD", "employee": {"id": "5W3Q4B3T88VAR"},
+        "taxRemoved": false, "isVat": false, "state": "open", "manualTransaction":
+        false, "groupLineItems": true, "testMode": false, "createdTime": 1497485038000,
+        "clientCreatedTime": 1497485038000, "modifiedTime": 1497485038000}, {"href":
+        "https://sandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/SV3DF5R8TB5PR",
+        "id": "SV3DF5R8TB5PR", "currency": "USD", "employee": {"id": "5W3Q4B3T88VAR"},
+        "taxRemoved": false, "isVat": false, "state": "open", "manualTransaction":
+        false, "groupLineItems": true, "testMode": false, "createdTime": 1497485038000,
+        "clientCreatedTime": 1497485038000, "modifiedTime": 1497485038000}, {"href":
+        "https://sandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/ENN24E2T7KH6M",
+        "id": "ENN24E2T7KH6M", "currency": "USD", "employee": {"id": "5W3Q4B3T88VAR"},
+        "taxRemoved": false, "isVat": false, "state": "open", "manualTransaction":
+        false, "groupLineItems": true, "testMode": false, "createdTime": 1497485038000,
+        "clientCreatedTime": 1497485038000, "modifiedTime": 1497485037000}, {"href":
+        "https://sandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/527TBW4186CQG",
+        "id": "527TBW4186CQG", "currency": "USD", "employee": {"id": "5W3Q4B3T88VAR"},
+        "taxRemoved": false, "isVat": false, "state": "open", "manualTransaction":
+        false, "groupLineItems": true, "testMode": false, "createdTime": 1497485037000,
+        "clientCreatedTime": 1497485037000, "modifiedTime": 1497485037000}, {"href":
+        "https://sandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/0C6W0TJ377DZ4",
+        "id": "0C6W0TJ377DZ4", "currency": "USD", "employee": {"id": "5W3Q4B3T88VAR"},
+        "taxRemoved": false, "isVat": false, "state": "open", "manualTransaction":
+        false, "groupLineItems": true, "testMode": false, "createdTime": 1497485037000,
+        "clientCreatedTime": 1497485037000, "modifiedTime": 1497485037000}, {"href":
+        "https://sandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/PEAJK9KQH2R2A",
+        "id": "PEAJK9KQH2R2A", "currency": "USD", "employee": {"id": "5W3Q4B3T88VAR"},
+        "taxRemoved": false, "isVat": false, "state": "open", "manualTransaction":
+        false, "groupLineItems": true, "testMode": false, "createdTime": 1497485037000,
+        "clientCreatedTime": 1497485037000, "modifiedTime": 1497485036000}, {"href":
+        "https://sandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/G3H7D3MAPJY08",
+        "id": "G3H7D3MAPJY08", "currency": "USD", "employee": {"id": "5W3Q4B3T88VAR"},
+        "taxRemoved": false, "isVat": false, "state": "open", "manualTransaction":
+        false, "groupLineItems": true, "testMode": false, "createdTime": 1497485037000,
+        "clientCreatedTime": 1497485037000, "modifiedTime": 1497485036000}, {"href":
+        "https://sandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/WN78TRG148JTE",
+        "id": "WN78TRG148JTE", "currency": "USD", "employee": {"id": "5W3Q4B3T88VAR"},
+        "taxRemoved": false, "isVat": false, "state": "open", "manualTransaction":
+        false, "groupLineItems": true, "testMode": false, "createdTime": 1497485036000,
+        "clientCreatedTime": 1497485036000, "modifiedTime": 1497485036000}, {"href":
+        "https://sandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/DJ6JEK283Z82W",
+        "id": "DJ6JEK283Z82W", "currency": "USD", "employee": {"id": "5W3Q4B3T88VAR"},
+        "taxRemoved": false, "isVat": false, "state": "open", "manualTransaction":
+        false, "groupLineItems": true, "testMode": false, "createdTime": 1497485036000,
+        "clientCreatedTime": 1497485036000, "modifiedTime": 1497485036000}, {"href":
+        "https://sandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/3WTCGXTG78EZ4",
+        "id": "3WTCGXTG78EZ4", "currency": "USD", "employee": {"id": "5W3Q4B3T88VAR"},
+        "taxRemoved": false, "isVat": false, "state": "open", "manualTransaction":
+        false, "groupLineItems": true, "testMode": false, "createdTime": 1497485036000,
+        "clientCreatedTime": 1497485036000, "modifiedTime": 1497485036000}, {"href":
+        "https://sandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/FDE6C9NSF2EXE",
+        "id": "FDE6C9NSF2EXE", "currency": "USD", "employee": {"id": "5W3Q4B3T88VAR"},
+        "taxRemoved": false, "isVat": false, "state": "open", "manualTransaction":
+        false, "groupLineItems": true, "testMode": false, "createdTime": 1497485036000,
+        "clientCreatedTime": 1497485036000, "modifiedTime": 1497485035000}, {"href":
+        "https://sandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/CT5R31FMJ2JXG",
+        "id": "CT5R31FMJ2JXG", "currency": "USD", "employee": {"id": "5W3Q4B3T88VAR"},
+        "taxRemoved": false, "isVat": false, "state": "open", "manualTransaction":
+        false, "groupLineItems": true, "testMode": false, "createdTime": 1497485035000,
+        "clientCreatedTime": 1497485035000, "modifiedTime": 1497485035000}], "href":
+        "http://apisandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders?filter=createdTime%3E%3D1497484800000&filter=createdTime%3C%3D1497488400000&filter=stateIS%20NOT%20NULL&limit=100"}'
+    http_version: 
+  recorded_at: Mon, 10 Jul 2017 07:21:06 GMT
+recorded_with: VCR 3.0.3
