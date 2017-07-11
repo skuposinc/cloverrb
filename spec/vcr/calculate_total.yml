@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://apisandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/NF839WP5F962G/line_items
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer ba54b5a8-cccc-3de3-cf5f-13b93b6a215a
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '1221'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+    body:
+      encoding: UTF-8
+      string: '{"elements": [ {"id": "7KQX3M31V33PY", "orderRef": {"id": "NF839WP5F962G"},
+        "item": {"id": "2174NDCGYWFNJ"}, "name": "pants", "price": 4843, "printed":
+        false, "createdTime": 1499661458000, "orderClientCreatedTime": 1499661458000,
+        "exchanged": false, "refunded": false, "isRevenue": true}, {"id": "BN6RW3PGFT3FM",
+        "orderRef": {"id": "NF839WP5F962G"}, "item": {"id": "X800J2KE64DV6"}, "name":
+        "ball", "price": 328, "printed": false, "createdTime": 1499661458000, "orderClientCreatedTime":
+        1499661458000, "exchanged": false, "refunded": false, "isRevenue": true},
+        {"id": "FQ1ZNW1S1RMS6", "orderRef": {"id": "NF839WP5F962G"}, "item": {"id":
+        "YXY9BKH27P4BM"}, "name": "pants", "price": 1234, "printed": false, "createdTime":
+        1499661458000, "orderClientCreatedTime": 1499661458000, "exchanged": false,
+        "refunded": false, "isRevenue": true}, {"id": "29HXMJ23RMGRE", "orderRef":
+        {"id": "NF839WP5F962G"}, "item": {"id": "RY0G5PK0PFVNP"}, "name": "ball",
+        "price": 2968, "printed": false, "createdTime": 1499661458000, "orderClientCreatedTime":
+        1499661458000, "exchanged": false, "refunded": false, "isRevenue": true}],
+        "href": "http://apisandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/NF839WP5F962G/line_items?limit=100"}'
+    http_version: 
+  recorded_at: Tue, 11 Jul 2017 05:44:43 GMT
+recorded_with: VCR 3.0.3

@@ -14,5 +14,10 @@ module Cloverrb
 
       response = get(@token, url)
     end
+
+    def self.total(line_items)
+      items = line_items["elements"]
+      items.inject(0) { |sum, item| sum + item["price"] }
+    end
   end
 end

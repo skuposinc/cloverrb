@@ -45,10 +45,17 @@ Or install it yourself as:
     orders = order_client.all(merchant_id
   ```
 
+  > Get the total order amount for a line items
+  ```ruby
+    line_items_client = Cloverrb::LineItem.new(token, order_id, merchant_id)
+    line_items = line_items_client.all
+    total = described_class.total(line_items)
+  ```
+
   > Get a list of orders from a specific timeframe
   ```ruby
     order_client = Cloverrb::Order(token)
-    orders = order_client.all(merchant_ihd, start_date, end_date)
+    orders = order_client.all(merchant_id, start_date, end_date)
   ```
   Note: `start_date` and `end_date` must be in milliseconds.
   Example:

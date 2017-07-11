@@ -10,8 +10,5 @@ module Cloverrb
       url = "/merchants/#{@merchant}/orders/#{@order}/line_items"
       response = get(@token, url)
     end
-
-    def total(line_items)
-    end
   end
 end

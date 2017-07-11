@@ -40,4 +40,19 @@ RSpec.describe Cloverrb::Order do
       end
     end
   end
+
+  describe "Calculate the total" do
+    it "should calculate the total order price from the line items" do
+      order_id = ENV['TEST_SANDBOX_ORDER_ID']
+
+      VCR.use_cassette("calculate_total", record: :once) do 
+        line_items_client = Cloverrb::LineItem.new(token, order_id, merchant_id)
+
+        line_items = line_items_client.all
+        total = described_class.total(line_items)
+
+        expect(total).to eq 9373
+      end
+    end
+  end
 end
