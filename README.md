@@ -38,6 +38,31 @@ Or install it yourself as:
     employees_client.all(merchant_id)
   ```
 
+### Order
+  > Get a list of orders of a specific merchant
+  ```ruby
+    order_client = Cloverrb::Order(token)
+    orders = order_client.all(merchant_id
+  ```
+
+  > Get a list of orders from a specific timeframe
+  ```ruby
+    order_client = Cloverrb::Order(token)
+    orders = order_client.all(merchant_ihd, start_date, end_date)
+  ```
+  Note: `start_date` and `end_date` must be in milliseconds.
+  Example:
+  ```
+    "June 15, 2017 8:00am".to_time.to_i * 1000
+  ```
+
+### Line Item
+  > Get a list of line items for a specific order
+  ```ruby
+    line_item_client = Cloverrb::LineItem(token, order_id, merchant_id)
+    line_items = line_item_client.all
+  ```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/iamarmanjon/cloverrb.
