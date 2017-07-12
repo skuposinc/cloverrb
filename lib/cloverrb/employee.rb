@@ -8,7 +8,7 @@ module Cloverrb
     def all(role=nil)
       url = "/merchants/#{@merchant_code}/employees"
       url += "?filter=role=#{role}" if role
-      response = get(@token, url)
+      get(@token, url)
     end
   end
 end

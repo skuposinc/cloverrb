@@ -8,7 +8,7 @@ module Cloverrb
 
     def all
       url = "/merchants/#{@merchant}/orders/#{@order}/line_items"
-      response = get(@token, url)
+      get(@token, url)
     end
   end
 end

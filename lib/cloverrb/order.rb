@@ -12,7 +12,7 @@ module Cloverrb
         url += "&filter=createdTime<=#{end_datetime}"
       end
 
-      response = get(@token, url)
+      get(@token, url)
     end
 
     def self.total(line_items)

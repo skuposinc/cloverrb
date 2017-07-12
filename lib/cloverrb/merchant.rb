@@ -6,7 +6,7 @@ module Cloverrb
 
     def find(merchant_id)
       url = "/merchants/#{merchant_id}"
-      response = get(@token, url) 
+      get(@token, url) 
     end
   end
 end
