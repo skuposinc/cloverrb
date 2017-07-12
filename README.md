@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/iamarmanjon/cloverrb/badges/gpa.svg)](https://codeclimate.com/github/codeclimate/codeclimate)
+
 # Cloverrb
 
 This is a ruby wrapper for the [Clover API - US](https://www.clover.com/api_docs/).
