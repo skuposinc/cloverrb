@@ -32,8 +32,9 @@ RSpec.describe Cloverrb::Order do
         order_client = described_class.new(token)
         start_date = "June 15, 2017 8:00am".to_time.to_i * 1000
         end_date = "June 15, 2017 9:00am".to_time.to_i * 1000
+        options = { "start_date": start_date, "end_date": end_date }
 
-        orders = order_client.all(merchant_id, start_date, end_date)
+        orders = order_client.all(merchant_id, options)
 
         expect(orders["elements"]).not_to be_empty
         expect(orders["elements"].count).to eq 15
@@ -45,8 +46,9 @@ RSpec.describe Cloverrb::Order do
     it "should fetch only the orders that are paid" do
       VCR.use_cassette("get_only_paid_orders", record: :once) do
         order_client = described_class.new(token)
+        options = { "state": "paid" }
 
-        orders = order_client.all(merchant_id, nil, nil, "paid")
+        orders = order_client.all(merchant_id, options)
         orders_states = orders["elements"].map { |o| o["state"] }
 
         expect(orders["elements"]).not_to be_empty
@@ -62,8 +64,13 @@ RSpec.describe Cloverrb::Order do
         start_date = "June 15, 2017 8:00am".to_time.to_i * 1000
         end_date = "June 15, 2017 9:00am".to_time.to_i * 1000
         state = "paid"
+        options = {
+          "start_date": start_date,
+          "end_date": end_date,
+          "state": state
+        }
 
-        orders = order_client.all(merchant_id, start_date, end_date, state)
+        orders = order_client.all(merchant_id, options)
         orders_states = orders["elements"].map { |o| o["state"] }
 
         expect(orders["elements"]).not_to be_empty

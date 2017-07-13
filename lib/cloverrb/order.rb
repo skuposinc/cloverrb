@@ -4,19 +4,14 @@ module Cloverrb
       @token = token
     end
 
-    def all(merchant_id, start_datetime=nil, end_datetime=nil, state=nil)
-      url = "/merchants/#{merchant_id}/orders"
+    def all(merchant_id, options = {})
+      url = "/merchants/#{merchant_id}/orders?"
 
-      if state && start_datetime && end_datetime
-        url += "?filter=createdTime>=#{start_datetime}"
-        url += "&filter=createdTime<=#{end_datetime}"
-        url += "&filter=state=#{state}"
-      elsif start_datetime && end_datetime
-        url += "?filter=createdTime>=#{start_datetime}"
-        url += "&filter=createdTime<=#{end_datetime}"
-      elsif state
-        url += "?filter=state=#{state}"
-      end
+      filters = []
+      filters << "filter=createdTime>=#{options[:start_date]}" if has_start_date?(options)
+      filters << "filter=createdTime<=#{options[:end_date]}" if has_end_date?(options)
+      filters << "filter=state=#{options[:state]}" if has_state?(options)
+      url += filters.join("&")
 
       get(@token, url)
     end
@@ -24,6 +19,18 @@ module Cloverrb
     def self.total(line_items)
       items = line_items["elements"]
       items.inject(0) { |sum, item| sum + item["price"] }
+    end
+
+    def has_start_date?(options)
+      options[:start_date]
+    end
+
+    def has_end_date?(options)
+      options[:end_date]
+    end
+
+    def has_state?(options)
+      options[:state]
     end
   end
 end
