@@ -30,8 +30,8 @@ RSpec.describe Cloverrb::Order do
     it "should fetch the proper amount of orders" do
       VCR.use_cassette("get_all_orders_between_dates", record: :once) do
         order_client = described_class.new(token)
-        start_date = "June 15, 2017 8:00am".to_time.to_i * 1000
-        end_date = "June 15, 2017 9:00am".to_time.to_i * 1000
+        start_date = "June 15, 2017 8:00am".to_time.utc.to_i * 1000
+        end_date = "June 15, 2017 9:00am".to_time.utc.to_i * 1000
         options = { "start_date": start_date, "end_date": end_date }
 
         orders = order_client.all(merchant_id, options)
@@ -61,8 +61,8 @@ RSpec.describe Cloverrb::Order do
     it "should fetch only the orders that are paid and correct timeframe" do
       VCR.use_cassette("get_only_paid_and_between_dates", record: :once) do
         order_client = described_class.new(token)
-        start_date = "June 15, 2017 8:00am".to_time.to_i * 1000
-        end_date = "June 15, 2017 9:00am".to_time.to_i * 1000
+        start_date = "June 15, 2017 8:00am".to_time.utc.to_i * 1000
+        end_date = "June 15, 2017 9:00am".to_time.utc.to_i * 1000
         state = "paid"
         options = {
           "start_date": start_date,

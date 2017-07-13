@@ -33,9 +33,9 @@ http_interactions:
         "clientCreatedTime": 1497485039000, "modifiedTime": 1497485039000}, {"href":
         "https://sandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/TV0GG2NG45KEM",
         "id": "TV0GG2NG45KEM", "currency": "USD", "employee": {"id": "5W3Q4B3T88VAR"},
-        "taxRemoved": false, "isVat": false, "state": "open", "manualTransaction":
+        "taxRemoved": false, "isVat": false, "state": "PAID", "manualTransaction":
         false, "groupLineItems": true, "testMode": false, "createdTime": 1497485039000,
-        "clientCreatedTime": 1497485039000, "modifiedTime": 1497485038000}, {"href":
+        "clientCreatedTime": 1497485039000, "modifiedTime": 1499836780000}, {"href":
         "https://sandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/0HS539QZJAC0M",
         "id": "0HS539QZJAC0M", "currency": "USD", "employee": {"id": "5W3Q4B3T88VAR"},
         "taxRemoved": false, "isVat": false, "state": "open", "manualTransaction":
@@ -73,9 +73,9 @@ http_interactions:
         "clientCreatedTime": 1497485037000, "modifiedTime": 1497485036000}, {"href":
         "https://sandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/G3H7D3MAPJY08",
         "id": "G3H7D3MAPJY08", "currency": "USD", "employee": {"id": "5W3Q4B3T88VAR"},
-        "taxRemoved": false, "isVat": false, "state": "open", "manualTransaction":
+        "taxRemoved": false, "isVat": false, "state": "PAID", "manualTransaction":
         false, "groupLineItems": true, "testMode": false, "createdTime": 1497485037000,
-        "clientCreatedTime": 1497485037000, "modifiedTime": 1497485036000}, {"href":
+        "clientCreatedTime": 1497485037000, "modifiedTime": 1499836774000}, {"href":
         "https://sandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/WN78TRG148JTE",
         "id": "WN78TRG148JTE", "currency": "USD", "employee": {"id": "5W3Q4B3T88VAR"},
         "taxRemoved": false, "isVat": false, "state": "open", "manualTransaction":
@@ -103,5 +103,5 @@ http_interactions:
         "clientCreatedTime": 1497485035000, "modifiedTime": 1497485035000}], "href":
         "http://apisandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders?filter=createdTime%3E%3D1497484800000&filter=createdTime%3C%3D1497488400000&filter=stateIS%20NOT%20NULL&limit=100"}'
     http_version: 
-  recorded_at: Mon, 10 Jul 2017 07:21:06 GMT
+  recorded_at: Thu, 13 Jul 2017 06:35:19 GMT
 recorded_with: VCR 3.0.3
