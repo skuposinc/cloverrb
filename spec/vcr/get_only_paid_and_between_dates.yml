@@ -1,0 +1,68 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://apisandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders?filter=createdTime%3C=1497488400000?filter=state=paid
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer ba54b5a8-cccc-3de3-cf5f-13b93b6a215a
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Content-Length:
+      - '95'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+    body:
+      encoding: UTF-8
+      string: '{"message":"Cannot parse ''1497488400000?filter=state=paid'' as timestamp
+        for field createdTime"}'
+    http_version: 
+  recorded_at: Thu, 13 Jul 2017 03:39:33 GMT
+- request:
+    method: get
+    uri: https://apisandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders?filter=state=paid
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer ba54b5a8-cccc-3de3-cf5f-13b93b6a215a
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Clover-Allowed-Filter-Fields:
+      - employee.id, note, modifiedTime, orderType, cardTransaction.last4, manualTransaction,
+        employee.name, title, device.id, clientCreatedTime, total, payType, customer.id,
+        testMode, createdTime, id, state, deletedTime
+      Content-Length:
+      - '985'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+    body:
+      encoding: UTF-8
+      string: '{"elements": [ {"href": "https://sandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/TV0GG2NG45KEM",
+        "id": "TV0GG2NG45KEM", "currency": "USD", "employee": {"id": "5W3Q4B3T88VAR"},
+        "taxRemoved": false, "isVat": false, "state": "PAID", "manualTransaction":
+        false, "groupLineItems": true, "testMode": false, "createdTime": 1497485039000,
+        "clientCreatedTime": 1497485039000, "modifiedTime": 1499836780000}, {"href":
+        "https://sandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/G3H7D3MAPJY08",
+        "id": "G3H7D3MAPJY08", "currency": "USD", "employee": {"id": "5W3Q4B3T88VAR"},
+        "taxRemoved": false, "isVat": false, "state": "PAID", "manualTransaction":
+        false, "groupLineItems": true, "testMode": false, "createdTime": 1497485037000,
+        "clientCreatedTime": 1497485037000, "modifiedTime": 1499836774000}], "href":
+        "http://apisandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders?filter=createdTime%3E%3D1497484800000&filter=createdTime%3C%3D1497488400000&filter=state%3Dpaid&limit=100"}'
+    http_version: 
+  recorded_at: Thu, 13 Jul 2017 03:40:52 GMT
+recorded_with: VCR 3.0.3

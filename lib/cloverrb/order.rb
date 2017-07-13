@@ -4,12 +4,18 @@ module Cloverrb
       @token = token
     end
 
-    def all(merchant_id, start_datetime=nil, end_datetime=nil)
+    def all(merchant_id, start_datetime=nil, end_datetime=nil, state=nil)
       url = "/merchants/#{merchant_id}/orders"
 
-      if start_datetime && end_datetime
+      if state && start_datetime && end_datetime
         url += "?filter=createdTime>=#{start_datetime}"
         url += "&filter=createdTime<=#{end_datetime}"
+        url += "&filter=state=#{state}"
+      elsif start_datetime && end_datetime
+        url += "?filter=createdTime>=#{start_datetime}"
+        url += "&filter=createdTime<=#{end_datetime}"
+      elsif state
+        url += "?filter=state=#{state}"
       end
 
       get(@token, url)
