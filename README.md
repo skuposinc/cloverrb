@@ -57,12 +57,25 @@ Or install it yourself as:
   > Get a list of orders from a specific timeframe
   ```ruby
     order_client = Cloverrb::Order(token)
-    orders = order_client.all(merchant_id, start_date, end_date)
+    options = {
+      "start_date": start_date,
+      "end_date": end_date
+    }
+    orders = order_client.all(merchant_id, options)
   ```
   Note: `start_date` and `end_date` must be in milliseconds.
   Example:
   ```
     "June 15, 2017 8:00am".to_time.to_i * 1000
+  ```
+
+  > Get a list of orders and filter by state
+  ```ruby
+    order_client = Cloverrb::Order(token)
+    options = {
+      "state": "paid"
+    }
+    orders = order_client.all(merchant_id, options)
   ```
 
 ### Line Item
