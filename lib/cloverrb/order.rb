@@ -1,8 +1,7 @@
 module Cloverrb
   class Order < Client
-    def initialize(token, sandbox=false)
+    def initialize(token)
       @token = token
-      @base_url = "https://apisandbox.dev.clover.com/v3" if sandbox
     end
 
     def all(merchant_id, options = {})

@@ -1,10 +1,9 @@
 module Cloverrb
   class LineItem < Client
-    def initialize(token, order, merchant, sandbox=false)
+    def initialize(token, order, merchant)
       @token = token
       @order = order
       @merchant = merchant
-      @base_url = "https://apisandbox.dev.clover.com/v3" if sandbox
     end
 
     def all
