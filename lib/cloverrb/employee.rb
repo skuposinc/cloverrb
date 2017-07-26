@@ -10,5 +10,10 @@ module Cloverrb
       url += "?filter=role=#{role}" if role
       get(@token, url)
     end
+
+    def find(employee_id)
+      url = "/merchants/#{@merchant_code}/employees/#{employee_id}"
+      get(@token, url)
+    end
   end
 end
