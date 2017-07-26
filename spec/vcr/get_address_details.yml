@@ -1,0 +1,30 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.clover.com/v3/merchants/CQWH7CZZVQ072/address
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 49ec922b-9d00-aef1-270c-b94ec130f795
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '165'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+    body:
+      encoding: UTF-8
+      string: '{"href": "https://www.clover.com/v3/merchants/CQWH7CZZVQ072/address",
+        "address1": "Address Line 1", "city": "Brisbane", "country": "US", "phoneNumber":
+        "1234567890"}'
+    http_version: 
+  recorded_at: Wed, 26 Jul 2017 02:20:28 GMT
+recorded_with: VCR 3.0.3

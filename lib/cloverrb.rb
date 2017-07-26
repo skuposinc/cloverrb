@@ -8,6 +8,7 @@ require_relative "cloverrb/merchant"
 require_relative "cloverrb/employee"
 require_relative "cloverrb/order"
 require_relative "cloverrb/line_item"
+require_relative "cloverrb/address"
 
 module Cloverrb
   # Your code goes here...
