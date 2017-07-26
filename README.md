@@ -40,6 +40,12 @@ Or install it yourself as:
     employees_client.all(merchant_id)
   ```
 
+  > Get a single employee
+  ```ruby
+    employees_client = Cloverrb::Employee(token, merchant_id)
+    employees_client.find(employee_id)
+  ```
+
 ### Order
   > Get a list of orders of a specific merchant
   ```ruby
