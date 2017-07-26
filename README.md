@@ -91,6 +91,13 @@ Or install it yourself as:
     line_items = line_item_client.all
   ```
 
+### Address
+  > Fetch the address details of a merchant
+  ```ruby
+    address_client = Cloverrb::Address(token, merchant_id)
+    address = address_client.fetch
+  ```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/iamarmanjon/cloverrb.
