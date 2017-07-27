@@ -39,4 +39,39 @@ http_interactions:
         "href": "http://apisandbox.dev.clover.com/v3/merchants/KT5N01408MB24/orders/NF839WP5F962G/line_items?limit=100"}'
     http_version: 
   recorded_at: Tue, 11 Jul 2017 04:45:40 GMT
+- request:
+    method: get
+    uri: https://api.clover.com/v3/merchants/CQWH7CZZVQ072/orders/8K01G88HS0KM6/line_items
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer 49ec922b-9d00-aef1-270c-b94ec130f795
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Length:
+      - '882'
+      Content-Type:
+      - application/json; charset=utf-8
+      X-Frame-Options:
+      - SAMEORIGIN
+    body:
+      encoding: UTF-8
+      string: '{"elements": [ {"id": "00A40Y9CXJK76", "orderRef": {"id": "8K01G88HS0KM6"},
+        "name": "Samsung 24inch Monitor", "price": 20000, "printed": false, "createdTime":
+        1501067742000, "orderClientCreatedTime": 1501067477000, "exchanged": false,
+        "refunded": false, "isRevenue": true}, {"id": "VCBAMFS454KCT", "orderRef":
+        {"id": "8K01G88HS0KM6"}, "name": "Fujifilm x100T", "price": 70000, "printed":
+        false, "createdTime": 1501067717000, "orderClientCreatedTime": 1501067477000,
+        "exchanged": false, "refunded": false, "isRevenue": true}, {"id": "FHQ7N922SV0YT",
+        "orderRef": {"id": "8K01G88HS0KM6"}, "name": "sports water bottle", "price":
+        3750, "printed": false, "createdTime": 1501067681000, "orderClientCreatedTime":
+        1501067477000, "exchanged": false, "refunded": false, "isRevenue": true}],
+        "href": "http://api.clover.com/v3/merchants/CQWH7CZZVQ072/orders/8K01G88HS0KM6/line_items?limit=100"}'
+    http_version: 
+  recorded_at: Thu, 27 Jul 2017 08:08:24 GMT
 recorded_with: VCR 3.0.3

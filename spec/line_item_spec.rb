@@ -1,20 +1,9 @@
 require "spec_helper"
 
 RSpec.describe Cloverrb::LineItem do
-  # THIS TEST USES THE SANDBOX URL SINCE
-  # I CAN'T ADD A NEW ORDER IN PRODUCTION
-
-  let(:token) { ENV['TEST_SANDBOX_API_TOKEN'] }
-  let(:merchant_id) { ENV['TEST_SANDBOX_MERCHANT_ID'] }
-  let(:order_id) { ENV['TEST_SANDBOX_ORDER_ID'] }
-
-  before(:all) do
-    Cloverrb::Client::BASE_URL = "https://apisandbox.dev.clover.com/v3"
-  end
-
-  after(:all) do
-    Cloverrb::Client::BASE_URL = "https://api.clover.com/v3"
-  end
+  let(:token) { ENV['TEST_API_TOKEN'] }
+  let(:merchant_id) { ENV['TEST_MERCHANT_ID'] }
+  let(:order_id) { ENV['TEST_ORDER_ID'] }
 
   describe "GET all line items of an order" do
     it "should get all the order line items" do
