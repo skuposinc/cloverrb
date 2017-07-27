@@ -98,6 +98,13 @@ Or install it yourself as:
     address = address_client.fetch
   ```
 
+### Properties
+  > Fetch the property details of a merchant
+  ```ruby
+    properties_client = Cloverrb::Properties(token, merchant_id)
+    properties = properties_client.fetch
+  ```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/iamarmanjon/cloverrb.
