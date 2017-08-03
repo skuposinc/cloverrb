@@ -1,6 +1,5 @@
 require "cloverrb/version"
 require "httparty"
-require "pry"
 require "dotenv/load"
 require "active_support/all"
 require_relative "cloverrb/client"
