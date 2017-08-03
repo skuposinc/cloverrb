@@ -10,8 +10,9 @@ RSpec.describe Cloverrb::Merchant do
         merchant_client = described_class.new(token)
         merchant = merchant_client.find(merchant_id)
 
-        expect(merchant["name"]).to eq "Josh's Cafe"
+        expect(merchant["name"]).to eq "Sennheiser Etc"
         expect(merchant["id"]).to eq "CQWH7CZZVQ072"
+        expect(merchant["owner"].present?).to eq true
       end
     end
   end
