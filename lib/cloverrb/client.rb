@@ -1,6 +1,6 @@
 module Cloverrb
   class Client
-    BASE_URL = "https://api.clover.com/v3"
+    BASE_URL = ENV.fetch("CLOVER_API_URL") { "https://api.clover.com/v3" }
     AUTH_URL = "https://clover.com/oauth/token"
 
     def get(token, path)
