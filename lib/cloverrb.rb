@@ -9,6 +9,7 @@ require_relative "cloverrb/order"
 require_relative "cloverrb/line_item"
 require_relative "cloverrb/address"
 require_relative "cloverrb/properties"
+require_relative "cloverrb/payment"
 
 module Cloverrb
   # Your code goes here...

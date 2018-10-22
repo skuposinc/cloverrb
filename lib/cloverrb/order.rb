@@ -16,6 +16,12 @@ module Cloverrb
       get(@token, url)
     end
 
+    def find(merchant_id, order_id)
+      url = "/merchants/#{merchant_id}/orders/#{order_id}"
+
+      get(@token, url)
+    end
+
     def self.total(line_items)
       items = line_items["elements"]
       items.inject(0) { |sum, item| sum + item["price"] }
