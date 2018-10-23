@@ -1,18 +1,13 @@
 module Cloverrb
   class Payment < Client
-    def initialize(token)
-      @token = token
-    end
-
-    def all(merchant_id)
+    def self.all(merchant_id, token)
       url = "/merchants/#{merchant_id}/payments"
-      get(@token, url)
+      get(token, url)
     end
 
-    def find(merchant_id, payment_id)
+    def self.find(merchant_id, token, payment_id)
       url = "/merchants/#{merchant_id}/payments/#{payment_id}"
-
-      get(@token, url)
+      get(token, url)
     end
   end
 end

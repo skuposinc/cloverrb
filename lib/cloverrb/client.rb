@@ -1,13 +1,13 @@
 module Cloverrb
   class Client
-    BASE_URL = ENV.fetch("CLOVER_API_URL") { "https://api.clover.com/v3" }
-    AUTH_URL = "https://clover.com/oauth/token"
+    BASE_URL = ENV.fetch("CLOVER_BASE_URL") { "https://api.clover.com/v3" }
+    AUTH_URL = ENV.fetch("CLOVER_AUTH_URL") { "https://clover.com/oauth/token" }
 
-    def get(token, path)
+    def self.get(token, path)
       HTTParty.get(BASE_URL + path, headers: build_headers(token)).parsed_response
     end
 
-    def post(token, path, body)
+    def self.post(token, path, body)
       HTTParty.post(
         BASE_URL + path,
         headers: build_headers(token),
@@ -15,7 +15,7 @@ module Cloverrb
       ).parsed_response
     end
 
-    def put(token, path, body)
+    def self.put(token, path, body)
       HTTParty.put(
         BASE_URL + path,
         headers: build_headers(token),
@@ -30,7 +30,7 @@ module Cloverrb
 
     private
 
-    def build_headers(token)
+    def self.build_headers(token)
       { "Authorization" => "Bearer #{token}"}
     end 
 
