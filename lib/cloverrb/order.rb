@@ -1,9 +1,9 @@
 module Cloverrb
   class Order < Client
     def self.all(merchant_id, token, options = {})
-      url = "/merchants/#{merchant_id}/orders?expand"
+      url = "/merchants/#{merchant_id}/orders?"
 
-      filters = %w(expand=lineItems expand=lineItems.discounts discounts)
+      filters = %w(expand=lineItems expand=lineItems.discounts expand=discounts)
       filters << "filter=createdTime>=#{options[:start_date]}" if has_start_date?(options)
       filters << "filter=createdTime<=#{options[:end_date]}" if has_end_date?(options)
       filters << "filter=state=#{options[:state]}" if has_state?(options)

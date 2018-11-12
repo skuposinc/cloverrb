@@ -1,7 +1,7 @@
 module Cloverrb
   class Client
     BASE_URL = ENV.fetch("CLOVER_BASE_URL") { "https://api.clover.com" }
-    AUTH_URL = ENV.fetch("CLOVER_AUTH_URL") { "https://clover.com" }
+    AUTH_URL = ENV.fetch("CLOVER_AUTH_URL") { "https://www.clover.com" }
 
     def self.get(token, path)
       HTTParty.get("#{BASE_URL}/v3" + path, headers: build_headers(token)).parsed_response
